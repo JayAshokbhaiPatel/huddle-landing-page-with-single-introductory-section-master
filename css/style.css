@@ -1,0 +1,155 @@
+:root {
+  --primary-violet: hsl(257, 40%, 49%);
+  --primary-soft-magenta: hsl(300, 69%, 71%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: var(--primary-violet);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  min-height: 100vh;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  min-height: 4rem;
+  padding: 1em;
+}
+
+.header__logo {
+  height: 2rem;
+  max-width: 100%;
+}
+
+.content-container {
+  padding: 1em;
+}
+
+.illustration-container {
+  width: 100%;
+}
+
+.illustration-container__img {
+  height: auto;
+  max-width: 100%;
+}
+
+.main-content {
+  --color-white: white;
+  margin-top: 2em;
+}
+
+.main-content__header {
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.main-content__description {
+  padding-top: 1em;
+  color: var(--color-white);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.register-button {
+  padding-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+.register-button__button {
+  padding-block: 1em;
+  padding-inline: 6em;
+  text-align: center;
+  background-color: var(--color-white);
+  color: var(--primary-soft-magenta);
+  border: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.icons-list {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+}
+
+.social-icon {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.social-icon i {
+  color: white;
+  vertical-align: middle;
+}
+
+footer {
+  margin-top: 1rem;
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-container {
+    background-image: url(../images/bg-desktop.svg);
+  }
+  .content-container {
+    display: flex;
+    min-height: calc(100vh - 150px);
+    align-items: center;
+    max-width: 56em;
+    gap: 1em;
+    margin: auto;
+  }
+  .main-content__header {
+    text-align: start;
+  }
+  .main-content__description {
+    text-align: start;
+  }
+
+  .register-button {
+    text-align: start;
+  }
+
+  .icons-container {
+    max-width: 56em;
+    padding-inline-end: 2em;
+  }
+  .icons-list {
+    justify-content: flex-end;
+  }
+}
